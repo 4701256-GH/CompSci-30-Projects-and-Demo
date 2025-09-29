@@ -6,13 +6,13 @@
 // - describe what you did to take this project "above and beyond"
 
 
-let lines = 5;
+let lines = 8;
 let y = 0;
 let lineToggle = false;
-let strokeColor;
+let strokeColor = "black";
 let strokeSize = 2;
 let backGround = "white";
-let rainbow = "on";
+let rainbow = "off";
 let r;
 let g;
 let b;
@@ -23,10 +23,13 @@ function setup() {
 
 function draw() {
   if(rainbow === "on"){
-    r = mouseX/2;
-    g = (mouseX - mouseY) * 4 ; 
-    b = mouseY;
+    r = mouseX/6;
+    g = (mouseX - mouseY) / 6 ; 
+    b = mouseY/3;
     stroke(r, g, b);
+  }
+  else{
+    srtoke = strokeColor;
   }
   
   background(backGround);
@@ -34,23 +37,24 @@ function draw() {
   let x = 0;
   
   y = 0;
-  while(x < 401) {
+  while(x < windowWidth) {
     line(x, y, mouseX, mouseY);
     x = x + lines;
   }
   x = 0;
-  while(x < 401) {
-    line(x, 400, mouseX, mouseY);
+  y = windowHeight;
+  while(x < windowWidth) {
+    line(x, y, mouseX, mouseY);
     x = x + lines;
   } 
   y = 0;
-  while(y < 401) {
+  while(y < windowHeight) {
     line(x, y, mouseX, mouseY);
     y = y + lines;
   }
   y = 0;
   x = 0;
-  while(y < 401) {
+  while(y < windowHeight) {
     line(x, y, mouseX, mouseY);
     y = y + lines;
   }
