@@ -6,7 +6,7 @@
 // - describe what you did to take this project "above and beyond"
 
 
-let lines = 8;
+let lineSpacing = 2;
 let y = 0;
 let lineToggle = false;
 let strokeColor = "black";
@@ -39,23 +39,23 @@ function draw() {
   y = 0;
   while(x < windowWidth) {
     line(x, y, mouseX, mouseY);
-    x = x + lines;
+    x = x + lineSpacing;
   }
   x = 0;
   y = windowHeight;
   while(x < windowWidth) {
     line(x, y, mouseX, mouseY);
-    x = x + lines;
+    x = x + lineSpacing;
   } 
   y = 0;
   while(y < windowHeight) {
     line(x, y, mouseX, mouseY);
-    y = y + lines;
+    y = y + lineSpacing;
   }
   y = 0;
   x = 0;
   while(y < windowHeight) {
     line(x, y, mouseX, mouseY);
-    y = y + lines;
+    y = y + lineSpacing;
   }
 }
