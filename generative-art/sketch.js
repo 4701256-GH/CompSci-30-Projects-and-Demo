@@ -10,7 +10,8 @@ let someTile;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  for (let x = 0; x < width; x += tilesize)
+  for (let x = 0; x < width; x += tilesize);
+    for (let y = 0; y < height; y += tilesize);
     someTile = spawnTile(x, height/2);
 
 
