@@ -23,6 +23,10 @@ function drawSpiral(){
   for(i = 0; i < 500; i++){
     rotate(50);
     line(850, i, -850, i++);
+    stroke(128, 0, 128);
+    line(-850, i, 550, i++);
+    stroke(255);
+    line(-850, i, 850, i++);
   }
 
 }
