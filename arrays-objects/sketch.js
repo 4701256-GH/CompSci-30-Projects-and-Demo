@@ -19,14 +19,19 @@ function draw() {
 
 
 function drawSpiral(){
+
+  translate(width/2, height/2);
+  wave = sin(radians(frameCount));
+  w = wave*map(mouseX,0,height,2500,0);
+
   stroke(0,0, 255);
-  for(i = 0; i < 500; i++){
+  for( i = 0; i < 500; i++){
     rotate(50);
-    line(850, i, -850, i++);
+    line(windowWidth/3, i-w/2, -windowWidth/2, i++);
     stroke(128, 0, 128);
-    line(-850, i, 550, i++);
+    line(-windowWidth/3, -i-w, windowHeight/2, i++);
     stroke(255);
-    line(-850, i, 850, i++);
+    line(-windowWidth/3, i-w, windowWidth/2, i++);
   }
 
 }
