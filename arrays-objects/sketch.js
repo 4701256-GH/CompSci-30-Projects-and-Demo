@@ -5,10 +5,14 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
-let angle;
+let theSpirals = [];
+let angleOfSpiral;
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  smooth();
+  frameRate(1000);
 }
 
 function draw() {
@@ -17,6 +21,13 @@ function draw() {
   
 }
 
+theSpiral = {
+  angle: ,
+  color: ,
+  speed: , 
+  volume: , 
+  pitch: ,
+}
 
 function drawSpiral(){
 
@@ -24,14 +35,15 @@ function drawSpiral(){
   wave = sin(radians(frameCount));
   w = wave*map(mouseX,0,height,2500,0);
 
-  stroke(0,0, 255);
+ 
   for( i = 0; i < 500; i++){
     rotate(50);
-    line(windowWidth/3, i-w/2, -windowWidth/2, i++);
+    stroke(0,0, 255);
+    line(windowWidth, i-w/2, -windowWidth, i++);
     stroke(128, 0, 128);
-    line(-windowWidth/3, -i-w, windowHeight/2, i++);
+    line(-windowWidth, -i-w, windowHeight, i++);
     stroke(255);
-    line(-windowWidth/3, i-w, windowWidth/2, i++);
+    line(-windowWidth, i-w, windowWidth, i++);
   }
 
 }
