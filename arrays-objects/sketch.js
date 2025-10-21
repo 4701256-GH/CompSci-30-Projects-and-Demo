@@ -7,6 +7,7 @@
 
 let theSpirals = [];
 let angleOfSpiral;
+let mic;
 
 
 function setup() {
@@ -18,23 +19,26 @@ function setup() {
 function draw() {
   background("black");
   drawSpiral();
-  
 }
 
-theSpiral = {
-  angle: ,
-  color: ,
-  speed: , 
-  volume: , 
-  pitch: ,
+// theSpiral = {
+//   angle: ,
+//   color: ,
+//   speed: , 
+// }
+function noiseVolume(){
+  
+  text(y, width/2, height/2);
 }
 
 function drawSpiral(){
 
+  micLevel = mic.getLevel();
+  let volume = micLevel * 500;
+
   translate(width/2, height/2);
   wave = sin(radians(frameCount));
-  w = wave*map(mouseX,0,height,2500,0);
-
+  w = wave*volume;
  
   for( i = 0; i < 500; i++){
     rotate(50);
@@ -47,14 +51,5 @@ function drawSpiral(){
   }
 
 }
-// function drawCircleThing() {
-//   stroke("white");
-//   for (i = 0; i < 500; i++) {
-//     let angle = i * 0.5;
-//     let radius = i * 0.4;
-//     let x = radius * cos(angle + time) + 200;
-//     let y = radius * sin(angle + time) + 200;
 
-//     point(x,y)
-//   }
-// }
+
