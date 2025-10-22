@@ -33,12 +33,9 @@ function noiseVolume(){
 
 function drawSpiral(){
 
-  micLevel = mic.getLevel();
-  let volume = micLevel * 500;
-
   translate(width/2, height/2);
   wave = sin(radians(frameCount));
-  w = wave*volume;
+  w = wave*map(mouseX,0,height,2500,0);
  
   for( i = 0; i < 500; i++){
     rotate(50);
