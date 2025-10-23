@@ -26,16 +26,18 @@ function draw() {
 //   color: ,
 //   speed: , 
 // }
-function noiseVolume(){
+// function noiseVolume(){
   
-  text(y, width/2, height/2);
-}
+//   let y
+//   text(y, width/2, height/2);
+// }
 
 function drawSpiral(){
 
   translate(width/2, height/2);
   wave = sin(radians(frameCount));
-  w = wave*map(mouseX,0,height,2500,0);
+  w = wave*map(y,0,height,2500,0);
+  
  
   for( i = 0; i < 500; i++){
     rotate(50);
