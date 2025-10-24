@@ -36,7 +36,7 @@ function drawSpiral(){
 
   translate(width/2, height/2);
   wave = sin(radians(frameCount));
-  w = wave*map(y,0,height,2500,0);
+  w = wave*map(mouseX,0,height,2500,0);
   
  
   for( i = 0; i < 500; i++){
@@ -48,7 +48,6 @@ function drawSpiral(){
     stroke(255);
     line(-windowWidth, i-w, windowWidth, i++);
   }
-
 }
 
 
