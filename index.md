@@ -7,7 +7,7 @@
 - [Perlin noise](perlin-noise) 
 - [Perlin Bubbles](perlin-bubble)
 - [Perlin Terrain](terrain)
-
+- [rectangle array](rectangle-array)
 ## Assignments
 - [Interactive Scene](interactive-scene) 
 - [Arrays and objects](arrays-objects)
