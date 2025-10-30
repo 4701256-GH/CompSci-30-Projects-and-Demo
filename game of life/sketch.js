@@ -32,10 +32,10 @@ function mousePressed() {
   toggleCell(x ,y);
 
   //neighbours
-  toggleCell(x + 1, y);
-  toggleCell(x - 1, y);
-  toggleCell(x, y - 1);
-  toggleCell(x, y + 1);
+  // toggleCell(x + 1, y);
+  // toggleCell(x - 1, y);
+  // toggleCell(x, y - 1);
+  // toggleCell(x, y + 1);
 }
 
 function toggleCell(x, y) {
@@ -57,6 +57,7 @@ function keyPressed() {
   else if (key === "e") {
     grid = generateEmptyGrid(cols, rows);
   }
+  
 }
 
 function displayGrid() {
@@ -100,4 +101,3 @@ function generateEmptyGrid(cols, rows) {
   }
   return newGrid;
 }
- 
