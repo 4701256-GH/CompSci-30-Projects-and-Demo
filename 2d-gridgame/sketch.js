@@ -8,7 +8,6 @@
 
 // Character in Grid 2d Array Demo
 
-const CELL_SIZE = 50;
 const OPEN_TILE = 0;
 const IMPASSIBLE = 1;
 const PLAYER = 9;
@@ -17,10 +16,12 @@ let rows;
 let cols;
 let thePlayer = {
   x: 0,
-  y: 0,
+  y: 0, 
 };
 let grassImg;
 let pathImg;
+let level = 1;
+let cell_size = window;
 
 function preload() {
   grassImg = loadImage("grass.png");
@@ -30,8 +31,8 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth * 0.9, windowHeight * 0.9);
-  cols = Math.floor(width/CELL_SIZE);
-  rows = Math.floor(height/CELL_SIZE);
+  cols = Math.floor(width/cell_size);
+  rows = Math.floor(height/cell_size);
   grid = generateRandomGrid(cols, rows);
 
   //add player to grid
@@ -44,8 +45,8 @@ function draw() {
 }
 
 function mousePressed() {
-  let x = Math.floor(mouseX/CELL_SIZE);
-  let y = Math.floor(mouseY/CELL_SIZE);
+  let x = Math.floor(mouseX/cell_size);
+  let y = Math.floor(mouseY/cell_size);
 
   //self
   toggleCell(x ,y);
@@ -103,19 +104,20 @@ function movePlayer(x, y) {
 }
 
 function displayGrid() {
+  // wichlevel()
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {
       if (grid[y][x] === OPEN_TILE) {
         // fill("white");
-        image(pathImg, x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE);
+        image(pathImg, x * cell_size, y * cell_size, cell_size);
       }
       else if (grid[y][x] === IMPASSIBLE) {
         // fill("black");
-        image(grassImg, x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE);
+        image(grassImg, x * cell_size, y * cell_size, cell_size);
       }
       else if (grid[y][x] === PLAYER) {
         fill("red");
-        square(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE);
+        square(x * cell_size, y * cell_size, cell_size);
       }
     }
   }
@@ -147,4 +149,12 @@ function generateEmptyGrid(cols, rows) {
     }
   }
   return newGrid;
+}
+
+// level picker and configer
+
+function wichlevel(){
+  if (level = 1){
+    let cell_size = windowWidth/5
+  }
 }
