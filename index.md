@@ -8,6 +8,7 @@
 - [Perlin Bubbles](perlin-bubble)
 - [Perlin Terrain](terrain)
 - [rectangle array](rectangle-array)
+- [walker oop](walker-oop)
 ## Assignments
 - [Interactive Scene](interactive-scene) 
 - [Arrays and objects](arrays-objects)
