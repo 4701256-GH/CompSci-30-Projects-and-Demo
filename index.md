@@ -9,6 +9,8 @@
 - [Perlin Terrain](terrain)
 - [rectangle array](rectangle-array)
 - [walker oop](walker-oop)
+- [firework oop](firework-oop)
+- [nodes](nodes)
 ## Assignments
 - [Interactive Scene](interactive-scene) 
 - [Arrays and objects](arrays-objects)
