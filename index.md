@@ -11,6 +11,7 @@
 - [walker oop](walker-oop)
 - [firework oop](firework-oop)
 - [nodes](nodes)
+- [oop inheiretn](oop-superclass)
 ## Assignments
 - [Interactive Scene](interactive-scene) 
 - [Arrays and objects](arrays-objects)
